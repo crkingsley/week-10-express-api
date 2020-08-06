@@ -1,0 +1,27 @@
+### Test the home page enpoint
+
+GET http://localhost:3001
+
+### Test a 404 response
+
+GET http://localhost:3001/testing-404
+
+### Test creating a product
+
+POST http://localhost:3001/
+Content-Type: application/json
+//body parser looks for json property
+
+{
+    "title": "Golf pants"
+}
+
+### Test the PUT which should change a product
+
+// ./src/index.js
+PUT http://localhost:3001/5f2b54d4a8a8941608aeb7f4
+Content-Type: application/json
+
+{
+    "title": "Way Mo Better Shirt"
+}
